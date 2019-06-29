@@ -17,6 +17,22 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
+  // Pour i18n
+  router: {
+    middleware: 'i18n'
+  },
+  plugins: [
+    // '~/plugins/analytics.js',
+    '~/plugins/i18n.js',
+    '~/plugins/lazyload.js',
+    // '~/plugins/modal.js',
+    '~/plugins/notification.js'
+  ],
+  generate: {
+    routes: ['/', '/about', '/fr', '/fr/about']
+  },
+
   /*
   ** Build configuration
   */
