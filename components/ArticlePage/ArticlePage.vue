@@ -121,11 +121,12 @@
         this.$router.push(`/articles/${idArticle}`)
       },
       trackEvent() {
-        this.$ga.event({
-          eventCategory: 'Article Page',
-          eventAction: 'read',
-          eventLabel: `article ${this.$route.params.id} is read`,
-        })
+        // this.$ga.event({
+        //   eventCategory: 'Article Page',
+        //   eventAction: 'read',
+        //   eventLabel: `article ${this.$route.params.id} is read`,
+        // })
+        // TODO fix trackEvent
       },
       isEmpty,
     },
