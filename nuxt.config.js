@@ -20,7 +20,7 @@ module.exports = {
 
   // Pour i18n
   router: {
-    middleware: 'i18n'
+    // middleware: 'i18n'
   },
   plugins: [
     // '~/plugins/analytics.js',
@@ -30,7 +30,7 @@ module.exports = {
     '~/plugins/notification.js'
   ],
   generate: {
-    routes: ['/', '/about', '/fr', '/fr/about']
+    routes: ['/', '/admin', '/articles/:id']
   },
 
   /*
