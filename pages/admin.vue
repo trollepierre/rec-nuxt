@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <article-list admin-mode="true"/>
+    <article-list :admin-mode="true"/>
   </div>
 </template>
 

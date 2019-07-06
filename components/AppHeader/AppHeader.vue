@@ -67,11 +67,11 @@
     },
     methods: {
       displaySubscribeModal() {
-        this.$modal.show('subscribe-modal')
+        // this.$modal.show('subscribe-modal')
       },
 
       displayFeedbackModal() {
-        this.$modal.show('feedback-modal')
+        // this.$modal.show('feedback-modal')
       },
     },
     i18n: {
