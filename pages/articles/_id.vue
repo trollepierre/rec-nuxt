@@ -4,9 +4,7 @@
   </div>
 </template>
 
-<!--TODO fill me-->
 <script>
-
   import ArticlePage from '../../components/ArticlePage/ArticlePage';
 
   export default {
@@ -14,7 +12,7 @@
       ArticlePage,
     },
     validate({ params }) {
-      // Doit être un nombre
+      // TODO Doit être un nombre
       return /^\d+$/.test(params.id);
     },
   };

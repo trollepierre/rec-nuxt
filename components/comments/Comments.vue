@@ -19,7 +19,6 @@
       }
     },
     methods: {
-      // TODO use store
       reloadTo() {
         this.toReload = true
       },

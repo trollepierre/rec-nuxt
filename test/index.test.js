@@ -1,3 +1,4 @@
+// TODO add jest, remove artifactories in yarn.lock, fix e2e, fix modal
 import { resolve } from 'path'
 import { Nuxt, Builder } from 'nuxt'
 import { JSDOM } from 'jsdom'
