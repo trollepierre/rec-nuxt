@@ -1,22 +1,22 @@
 <template>
   <div id="app">
     <app-header/>
-<!--    <subscribe-modal/>-->
-<!--    <feedback-modal/>-->
+    <!--    <subscribe-modal/>-->
+    <!--    <feedback-modal/>-->
     <nuxt/>
   </div>
 </template>
 
 <script>
   import AppHeader from '../components/AppHeader/AppHeader.vue'
-  import FeedbackModal from '../components/FeedbackModal/FeedbackModal.vue'
-  import SubscribeModal from '../components/SubscribeModal/SubscribeModal.vue'
+  // import FeedbackModal from '../components/FeedbackModal/FeedbackModal.vue'
+  // import SubscribeModal from '../components/SubscribeModal/SubscribeModal.vue'
 
   export default {
     components: {
       'app-header': AppHeader,
-      'feedback-modal': FeedbackModal,
-      'subscribe-modal': SubscribeModal,
+      // 'feedback-modal': FeedbackModal,
+      // 'subscribe-modal': SubscribeModal,
     },
   }
 </script>

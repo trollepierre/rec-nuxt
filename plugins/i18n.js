@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 

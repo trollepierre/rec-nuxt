@@ -1,8 +1,8 @@
 const screenWidth = () => {
-if(!window) return '1000'
-return window.innerWidth
-  || document.documentElement.clientWidth
-  || document.body.clientWidth
+  if(!window) return '1000'
+  return window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth
 }
 
 const screenHeight = () => {
@@ -10,8 +10,8 @@ const screenHeight = () => {
     return '600';
   } else {
     return window.innerHeight
-    || document.documentElement.clientHeight
-    || document.body.clientHeight;
+      || document.documentElement.clientHeight
+      || document.body.clientHeight;
   }
 }
 

@@ -40,8 +40,8 @@
                 class="navbar-action navbar-action__tdm"
                 href="http://worldtour.recontact.me">
                 <img
-                  class="tdm__image"
                   :alt="logo"
+                  class="tdm__image"
                   src="/static/tdm.jpg">
               </a>
             </li>

@@ -23,9 +23,9 @@ module.exports = {
     'jest'
   ],
   rules: {
-    'import/no-extraneous-dependencies': ['error', {
-      'optionalDependencies': ['test/unit/index.js']
-    }],
+    // 'import/no-extraneous-dependencies': ['error', {
+    //   'optionalDependencies': ['test/unit/index.js']
+    // }],
 
     // 'jest/no-disabled-tests': 'error',
     'jest/no-focused-tests': 'error',

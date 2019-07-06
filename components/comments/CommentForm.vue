@@ -17,8 +17,8 @@
           <input
             id="author"
             v-model="newAuthor"
-            class="forum__comment-box author"
-            :placeholder="anonymous">
+            :placeholder="anonymous"
+            class="forum__comment-box author">
         </div>
       </header>
       <main class="form__content">
@@ -31,8 +31,8 @@
           <textarea
             id="comment"
             v-model="newComment"
-            class="forum__comment-box text"
-            :placeholder="textPlaceholder"/>
+            :placeholder="textPlaceholder"
+            class="forum__comment-box text"/>
         </div>
       </main>
       <footer class="form__footer">
