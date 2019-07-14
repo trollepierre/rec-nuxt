@@ -2,7 +2,6 @@
 // TODO 
 
 // WITH INTERNET
-- remove artifactories in yarn.lock 
 - add jest (=> add test)
 - fix warn during install
 
