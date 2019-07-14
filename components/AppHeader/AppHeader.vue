@@ -16,7 +16,9 @@
         <nav
           class="app-header__navigation navigation"
           role="navigation"
-          aria-label="site navigation">
+          aria-label="site navigation"
+          v-if="showNavBar"
+        >
           <ol class="navigation__links">
             <li class="navigation__link">
               <button
@@ -54,6 +56,7 @@
 <script>
   export default {
     name: 'AppHeader',
+    data: () => ({ showNavBar: false }),
     computed: {
       tdm() {
         return this.$t('tdm')

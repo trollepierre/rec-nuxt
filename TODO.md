@@ -2,6 +2,7 @@ MAIN TODO
 -
 - [x] yarn start work
 - [x] work in production with /articles/85 reload
+- [x] remove broken nav bars
 - [ ] validate if nuxt is needed
  
 - [ ] remove console log in prod
@@ -11,7 +12,7 @@ WITH INVESTIGATION INTERNET
 -
 - [ ] fix warn during install
 - [ ] fix e2e
-- [ ] fix modal
+- [ ] fix modal => showNavBar
 - [ ] fix notif
 - [ ] fix analytics
 - [ ] manage 404
