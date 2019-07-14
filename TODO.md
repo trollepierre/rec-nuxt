@@ -1,7 +1,9 @@
 MAIN TODO
 -
 - [x] yarn start work
-- [ ] work in production
+- [x] work in production with /articles/85 reload
+- [ ] validate if nuxt is needed
+ 
 - [ ] remove console log in prod
 - [ ] fix env variable for api url
 
