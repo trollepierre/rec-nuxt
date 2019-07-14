@@ -18,6 +18,7 @@ BUG TO FIX ASAP
 - [ ] fix  ERROR  Error generating /articles/:id 
 - [ ] clean everything
 - [ ] add english
+- [ ] manage language in nuxt.config.js
 - [ ] fix warn during install
 - [ ] fix e2e
 - [ ] fix modal => showNavBar

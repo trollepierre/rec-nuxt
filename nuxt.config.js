@@ -3,14 +3,22 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'rec-nuxt',
+    title: 'Recontact.Me - Blog de Voyage',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Recontact.me en Nuxt' }
+      { hid: 'description', name: 'description', content: 'Articles du tour du monde de Pierre et Benoît - Amérique du Sud, Océanie, Asie, Europe, Amérique centrale' },
+      { name: 'theme-color', content: '#ffffff' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'canonical', href: 'https://www.recontact.me' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
+      { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'manifest',  href: '/manifest.json' }
     ]
   },
   /*
@@ -54,5 +62,5 @@ module.exports = {
       }
     }
   }
-}
+};
 
