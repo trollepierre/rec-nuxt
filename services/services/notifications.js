@@ -4,22 +4,22 @@ export default {
   // },
 
   success(component, message) {
-    console.log('toaster says success');
+    console.log('Success');
     console.log(message);
   },
 
   error(component, message) {
-    console.log('toaster says error');
+    console.log('Error');
     console.log(message);
   },
 
   information(component, message) {
-    console.log('toaster says information');
+    console.log('Information');
     console.log(message);
   },
 
   removeInformation(component) {
-    console.log('toaster says information removed');
+    console.log('Information removed');
   },
 };
 

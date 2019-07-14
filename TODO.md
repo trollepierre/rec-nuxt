@@ -1,17 +1,21 @@
-MAIN TODO
+CAN USE NUXT IN PROD
 -
 - [x] yarn start work
 - [x] work in production with /articles/85 reload
 - [x] remove broken nav bars
 - [x] validate if nuxt is needed
+- [x] fix language
  
-- [ ] remove console log in prod
-- [ ] fix env variable for api url
-- [ ] fix language
-- [ ] fix  ERROR  Error generating /articles/:id 
+- [x] remove console log in prod
+- [x] check comment and photos
 
-WITH INVESTIGATION INTERNET
+BUG TO FIX ASAP
 -
+- [ ] add test
+- [ ] toaster à remove
+- [ ] api Service à utiliser partout
+- [ ] fix env variable for api url
+- [ ] fix  ERROR  Error generating /articles/:id 
 - [ ] clean everything
 - [ ] add english
 - [ ] fix warn during install

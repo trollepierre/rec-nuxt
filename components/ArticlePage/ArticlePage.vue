@@ -97,21 +97,11 @@
       async getChapters() {
 
         this.trackEvent();
-        console.log('inside get chapters');
         await chaptersApi.fetch(this.dropboxId)
-          .then(article => {
-            console.log('article');
-            console.log(article);
-            return article;
-          })
           .then(article => {
             this.chapters = article.chapters;
             this.title = translationsService.getTitle(article);
           })
-          .catch(err => {
-            console.log('error');
-            console.log(err);
-          });
       },
       getPhotos() {
         photosApi.fetch(this.dropboxId)

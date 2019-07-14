@@ -4,8 +4,6 @@ import env from '../env/env'
 const ArticlesApi = {
 
   fetchAll() {
-    console.log('fetch all articles?');
-
     const url = `${env('API_URL')}api/articles`
     const options = { headers: { 'Content-Type': 'application/json', 'Referrer-Policy': 'no-referrer-when-downgrade' } }
     return axios.get(url, options)
