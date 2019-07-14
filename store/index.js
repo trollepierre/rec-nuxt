@@ -1,11 +1,12 @@
 export const state = () => ({
   locales: ['en', 'fr'],
-  locale: 'en'
+  locale: 'fr'
 })
 
 export const mutations = {
-  SET_LANG(state, locale) {
-    if (state.locales.indexOf(locale) !== -1) {
+  SET_LANG (state, locale) {
+    console.log('inside mutations set lang');
+    if (state.locales.includes(locale)) {
       state.locale = locale
     }
   }

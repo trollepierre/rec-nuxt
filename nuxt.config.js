@@ -30,7 +30,10 @@ module.exports = {
     '~/plugins/notification.js'
   ],
   generate: {
-    routes: ['/', '/admin', '/articles/:id']
+    routes: [
+      '/', '/admin', '/articles/:id',
+      '/en', '/en/admin', '/en/articles/:id',
+    ]
   },
 
   /*

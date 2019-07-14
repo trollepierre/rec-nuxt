@@ -16,10 +16,26 @@
         <nav
           class="app-header__navigation navigation"
           role="navigation"
-          aria-label="site navigation"
-          v-if="showNavBar"
-        >
-          <ol class="navigation__links">
+          aria-label="site navigation">
+          <NuxtLink
+            v-if="$i18n.locale === 'fr'"
+            :to="`/en` + $route.fullPath"
+            class="Header__Link"
+            active-class="none"
+            exact>
+            {{ $t('links.english') }}
+          </NuxtLink>
+          <NuxtLink
+            v-else
+            class="Header__Link"
+            :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
+            active-class="none"
+            exact>
+            {{ $t('links.french') }}
+          </NuxtLink>
+          <ol
+            v-if="showNavBar"
+            class="navigation__links">
             <li class="navigation__link">
               <button
                 class="navbar-action navbar-action__subscribe"

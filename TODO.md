@@ -3,10 +3,12 @@ MAIN TODO
 - [x] yarn start work
 - [x] work in production with /articles/85 reload
 - [x] remove broken nav bars
-- [ ] validate if nuxt is needed
+- [x] validate if nuxt is needed
  
 - [ ] remove console log in prod
 - [ ] fix env variable for api url
+- [ ] fix language
+- [ ] fix  ERROR  Error generating /articles/:id 
 
 WITH INVESTIGATION INTERNET
 -
