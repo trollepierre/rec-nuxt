@@ -12,6 +12,8 @@ MAIN TODO
 
 WITH INVESTIGATION INTERNET
 -
+- [ ] clean everything
+- [ ] add english
 - [ ] fix warn during install
 - [ ] fix e2e
 - [ ] fix modal => showNavBar

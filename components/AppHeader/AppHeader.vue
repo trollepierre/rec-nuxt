@@ -17,7 +17,7 @@
           class="app-header__navigation navigation"
           role="navigation"
           aria-label="site navigation">
-          <NuxtLink
+          <!--<NuxtLink
             v-if="$i18n.locale === 'fr'"
             :to="`/en` + $route.fullPath"
             class="Header__Link"
@@ -32,7 +32,7 @@
             active-class="none"
             exact>
             {{ $t('links.french') }}
-          </NuxtLink>
+          </NuxtLink>-->
           <ol
             v-if="showNavBar"
             class="navigation__links">
