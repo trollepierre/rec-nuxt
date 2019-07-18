@@ -11,6 +11,7 @@ CAN USE NUXT IN PROD
 
 BUG TO FIX ASAP
 -
+- [ ] fix warn during install
 - [ ] add test
 - [ ] toaster à remove
 - [ ] api Service à utiliser partout

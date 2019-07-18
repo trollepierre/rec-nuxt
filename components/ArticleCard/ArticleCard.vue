@@ -76,7 +76,8 @@
         return `/articles/${this.article.dropboxId}`
       },
       articleTitle() {
-        return translationsService.getTitle(this.article)
+        const language = this.$store.state.locale
+        return translationsService.getTitle(this.article, language)
       },
     },
     methods: {

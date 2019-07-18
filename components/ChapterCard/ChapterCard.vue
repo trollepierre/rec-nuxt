@@ -55,13 +55,15 @@
         return !imgLink ? false : imgLink
       },
       chapterTitle() {
-        return translationsService.getChapterTitle(this.chapter)
+        const language = this.$store.state.locale
+        return translationsService.getChapterTitle(this.chapter, language)
       },
       chapterAlt() {
         return this.$t('altComplement') + this.chapterText[0].text
       },
       chapterText() {
-        const chapterText = translationsService.getChapterText(this.chapter)
+        const language = this.$store.state.locale
+        const chapterText = translationsService.getChapterText(this.chapter, language)
 
         return chapterText
           .filter(paragraph => !!paragraph)
