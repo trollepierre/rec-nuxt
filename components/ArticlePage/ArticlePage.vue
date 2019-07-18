@@ -100,7 +100,8 @@
         await chaptersApi.fetch(this.dropboxId)
           .then(article => {
             this.chapters = article.chapters;
-            this.title = translationsService.getTitle(article);
+            const language = this.$store.state.locale
+            this.title = translationsService.getTitle(article, language);
           })
       },
       getPhotos() {
