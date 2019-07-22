@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Recontact.Me - Blog de Voyage',
+    title: 'Recontact.Me - Travelling Blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Articles du tour du monde de Pierre et Benoît - Amérique du Sud, Océanie, Asie, Europe, Amérique centrale' },
+      { hid: 'description', name: 'description', content: 'Articles of the world trip of Pierre and Benoît - South America, Oceania, Asia, Europa, Central America' },
       { name: 'theme-color', content: '#ffffff' },
     ],
     link: [
