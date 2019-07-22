@@ -1,16 +1,6 @@
 {
-  "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
-  },
-  "home": {
-    "title": "Welcome",
-    "introduction": "This is an introduction in English."
-  },
-  "about": {
-    "title": "About",
-    "introduction": "This page is made to give you more informations."
-  }
+  "hereTheGallery": "Here is the photo gallery of this article",
+  "goToPreviousArticle": "Read the previous article",
+  "goToNextArticle": "Read the next article",
+  "goToHomePage": "Go to Home Page"
 }

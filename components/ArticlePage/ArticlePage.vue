@@ -132,22 +132,6 @@
       },
       isEmpty,
     },
-    i18n: {
-      messages: {
-        fr: {
-          hereTheGallery: 'Voici la galerie photo de cet article  !',
-          goToPreviousArticle: 'Voir l’article précédent',
-          goToNextArticle: 'Voir l’article suivant',
-          goToHomePage: 'Retour à la page d’accueil',
-        },
-        en: {
-          hereTheGallery: 'Here is the photo gallery of this article',
-          goToPreviousArticle: 'Read the previous article',
-          goToNextArticle: 'Read the next article',
-          goToHomePage: 'Go to Home Page',
-        },
-      },
-    },
   }
 </script>
 
