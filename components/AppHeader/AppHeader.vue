@@ -120,7 +120,6 @@
   border-bottom: 1px solid #e6e6e6;
   width: 100%;
   padding-left: 0;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .page__header--container {
