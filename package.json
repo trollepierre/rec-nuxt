@@ -8,6 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "start:en": "LANGUAGE=en nuxt start",
+    "start:fr": "LANGUAGE=fr nuxt start",
     "generate": "nuxt generate",
     "generate:en": "LANGUAGE=en nuxt generate",
     "generate:fr": "LANGUAGE=fr nuxt generate",
