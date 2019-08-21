@@ -42,6 +42,9 @@ const headFr = {
   ]
 }
 
+const articleRoutes = [...Array(100).keys()]
+  .map((val, index) => `/articles/${index}`)
+
 module.exports = {
   /*
   ** Headers of the page
@@ -65,8 +68,9 @@ module.exports = {
   ],
   generate: {
     routes: [
-      '/', '/admin', '/articles/:id',
-      '/en', '/en/admin', '/en/articles/:id',
+      '/',
+      '/admin',
+      ...articleRoutes,
     ]
   },
 
