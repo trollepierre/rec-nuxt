@@ -1,5 +1,3 @@
-
-
 export const state = () => {
   return ({
     locales: ['en', 'fr'],
