@@ -12,3 +12,5 @@ dist
 
 .idea
 yarn-error.log
+
+.env
