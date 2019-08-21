@@ -51,7 +51,7 @@
               <a
                 :title="otherLanguage"
                 class="navbar-action navbar-action__other-language"
-                href="https://you.recontact.me">
+                :href="otherUrl">
                 {{ $t("otherLanguage") }}
               </a>
             </li>
@@ -77,13 +77,16 @@
       },
       otherLanguage() {
         return this.$t('otherLanguage')
+      },
+      otherUrl() {
+        return this.$t('otherUrl')
       }
-    },  
+    },
     mounted() {
       if(navigator.language.substring(0, 2) === 'fr') {
         alert('La version française du blog est désormais disponible sur https://fr.recontact.me, cliquez sur le lien en haut à droite pour retrouver le blog en français.')
       }
-    },    
+    },
     methods: {
       displaySubscribeModal() {
       // this.$modal.show('subscribe-modal')
@@ -103,6 +106,7 @@
           home: 'Page d’accueil',
           logo: 'Logo du site',
           otherLanguage: 'English Blog',
+          otherUrl: 'https://www.recontact.me',
         },
         en: {
           subscribe: 'Subscribe',
@@ -112,6 +116,7 @@
           home: 'Home page',
           logo: 'Logo of the site',
           otherLanguage: 'Blog en Français',
+          otherUrl: 'https://fr.recontact.me',
         },
       },
     },
