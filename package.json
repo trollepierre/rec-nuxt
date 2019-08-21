@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "build:en": "LANGUAGE=en nuxt build",
-    "build:fr": "LANGUAGE=fr nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "generate:en": "LANGUAGE=en nuxt generate",
+    "generate:fr": "LANGUAGE=fr nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "yarn lint --fix",
     "precommit": "yarn lint:fix",
