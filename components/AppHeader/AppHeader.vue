@@ -83,7 +83,7 @@
       }
     },
     mounted() {
-      if(navigator.language.substring(0, 2) === 'fr' && window.location.href === 'https://www.recontact.me') {
+      if(navigator.language.substring(0, 2) === 'fr' && window.location.href === 'https://www.recontact.me/') {
         alert('La version française du blog est désormais disponible sur https://fr.recontact.me, cliquez sur le lien en haut à droite pour retrouver le blog en français.')
       }
     },
