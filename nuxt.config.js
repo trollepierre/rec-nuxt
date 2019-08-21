@@ -1,26 +1,52 @@
+require('dotenv').config()
+
+const language = process.env.LANGUAGE
+
+const headEn = {
+  title: 'Recontact.Me - Travelling Blog',
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { hid: 'description', name: 'description', content: 'Articles of the world trip of Pierre and Benoît - South America, Oceania, Asia, Europa, Central America' },
+    { name: 'theme-color', content: '#ffffff' },
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'canonical', href: 'https://www.recontact.me' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
+    { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'manifest',  href: '/manifest.json' }
+  ]
+};
+
+const headFr = {
+  title: 'Recontact.Me - Blog de Voyage',
+    meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { hid: 'description', name: 'description', content: 'Articles du tour du monde de Pierre et Benoît - Amérique du Sud, Océanie, Asie, Europe, Amérique centrale' },
+    { name: 'theme-color', content: '#ffffff' },
+  ],
+    link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'canonical', href: 'https://fr.recontact.me' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
+    { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'manifest',  href: '/manifest.json' }
+  ]
+}
+
 module.exports = {
   /*
   ** Headers of the page
   */
-  head: {
-    title: 'Recontact.Me - Travelling Blog',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Articles of the world trip of Pierre and Benoît - South America, Oceania, Asia, Europa, Central America' },
-      { name: 'theme-color', content: '#ffffff' },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'canonical', href: 'https://www.recontact.me' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
-      { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'manifest',  href: '/manifest.json' }
-    ]
-  },
+  head: language === 'en' ? headEn : headFr,
   /*
   ** Customize the progress bar color
   */
@@ -61,6 +87,10 @@ module.exports = {
         })
       }
     }
-  }
+  },
+
+  modules: [
+    '@nuxtjs/dotenv',
+  ]
 };
 
