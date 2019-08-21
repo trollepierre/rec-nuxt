@@ -201,7 +201,7 @@
   color: #F48024;
   text-decoration: unset;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .navbar-action__tdm {
@@ -221,6 +221,10 @@
   .logo-link__recontact {
     color: #07c;
     padding-left: 0;
+  }
+
+  .navbar-action__other-language {
+    font-size: 20px;
   }
 }
 </style>
