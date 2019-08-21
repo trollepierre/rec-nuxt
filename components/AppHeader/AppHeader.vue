@@ -80,23 +80,11 @@
       }
     },  
     mounted() {
-      this.showConsole()
+      if(navigator.language.substring(0, 2) === 'fr') {
+        alert('La version française du blog est désormais disponible sur https://fr.recontact.me, cliquez sur le lien en haut à droite pour retrouver le blog en français.')
+      }
     },    
     methods: {
-      showConsole() {
-        console.log('langue')
-        console.log('langue', navigator.language)
-        if(navigator.language.substring(0, 2) === 'en') {
-          console.log('langue', navigator.language)
-          console.log('english')
-          alert('go to https://you.recontact.me')
-        } else {
-          alert('Allez sur https://www.recontact.me')
-          console.log('french')
-          console.log('langue', navigator.language)
-        }
-      },
-      
       displaySubscribeModal() {
       // this.$modal.show('subscribe-modal')
       },
