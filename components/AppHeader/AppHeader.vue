@@ -6,37 +6,17 @@
           :title="home"
           class="logo-link"
           href="/">
-          <span class="logo-link__recontact">
-            Recontact
-          </span>
-          <span class="logo-link__me">
-            Me
-          </span>
+          <span class="logo-link__recontact">Recontact</span>
+          <span class="logo-link__me">Me</span>
         </a>
         <nav
           class="app-header__navigation navigation"
           role="navigation"
           aria-label="site navigation">
-          <!--<NuxtLink
-            v-if="$i18n.locale === 'fr'"
-            :to="`/en` + $route.fullPath"
-            class="Header__Link"
-            active-class="none"
-            exact>
-            {{ $t('links.english') }}
-          </NuxtLink>
-          <NuxtLink
-            v-else
-            class="Header__Link"
-            :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
-            active-class="none"
-            exact>
-            {{ $t('links.french') }}
-          </NuxtLink>-->
-          <ol
-            v-if="showNavBar"
-            class="navigation__links">
-            <li class="navigation__link">
+          <ol class="navigation__links">
+            <li
+              v-if="showNavBarButton"
+              class="navigation__link">
               <button
                 class="navbar-action navbar-action__subscribe"
                 type="button"
@@ -44,7 +24,9 @@
                 {{ $t("subscribe") }}
               </button>
             </li>
-            <li class="navigation__link">
+            <li
+              v-if="showNavBarButton"
+              class="navigation__link">
               <button
                 class="navbar-action navbar-action__suggestion"
                 type="button"
@@ -52,7 +34,9 @@
                 {{ $t("suggestion") }}
               </button>
             </li>
-            <li class="navigation__link tdm">
+            <li
+              v-if="showNavBarButton"
+              class="navigation__link tdm">
               <a
                 :title="tdm"
                 class="navbar-action navbar-action__tdm"
@@ -61,6 +45,14 @@
                   :alt="logo"
                   class="tdm__image"
                   src="/static/tdm.jpg">
+              </a>
+            </li>
+            <li class="navigation__link other-language">
+              <a
+                :title="otherLanguage"
+                class="navbar-action navbar-action__other-language"
+                href="https://you.recontact.me">
+                {{ $t("otherLanguage") }}
               </a>
             </li>
           </ol>
@@ -72,7 +64,7 @@
 <script>
   export default {
     name: 'AppHeader',
-    data: () => ({ showNavBar: false }),
+    data: () => ({ showNavBarButton: false }),
     computed: {
       tdm() {
         return this.$t('tdm')
@@ -83,14 +75,17 @@
       logo() {
         return this.$t('logo')
       },
+      otherLanguage() {
+        return this.$t('otherLanguage')
+      }
     },
     methods: {
       displaySubscribeModal() {
-        // this.$modal.show('subscribe-modal')
+      // this.$modal.show('subscribe-modal')
       },
 
       displayFeedbackModal() {
-        // this.$modal.show('feedback-modal')
+      // this.$modal.show('feedback-modal')
       },
     },
     i18n: {
@@ -102,6 +97,7 @@
           tdm: 'Retrouver l’ancien site du tour du monde de Pierre et Benoît',
           home: 'Page d’accueil',
           logo: 'Logo du site',
+          otherLanguage: 'English Blog',
         },
         en: {
           subscribe: 'Subscribe',
@@ -110,6 +106,7 @@
           tdm: 'Go to see the former website of the world trip of Pierre and Benoît',
           home: 'Home page',
           logo: 'Logo of the site',
+          otherLanguage: 'Blog en Français',
         },
       },
     },
@@ -117,95 +114,104 @@
 </script>
 
 <style scoped>
-  .page__header {
-    height: 60px;
-    background: #ffffff;
-    border-bottom: 1px solid #e6e6e6;
-    width: 100%;
-    padding-left: 0;
-    border-bottom: 1px solid #e6e6e6;
-  }
+.page__header {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+  padding-left: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
 
+.page__header--container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 900;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.logo-link:hover {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.logo-link__recontact {
+  color: #07c;
+  padding-left: 10px;
+}
+
+.logo-link__me {
+  color: #F48024;
+}
+
+.navbar-action {
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  border: none;
+  padding: 16px 0;
+  line-height: 28px;
+  color: #333333;
+  display: inline-block;
+}
+
+.navbar-action:hover {
+  text-decoration: underline;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.navbar-action__suggestion,
+.navbar-action__tdm {
+  display: none;
+}
+
+.navigation__links {
+  list-style: none;
+  margin: 0;
+  display: inline-flex;
+}
+
+.navigation__link {
+  margin-left: 25px;
+}
+
+.page__container {
+  margin: 0 auto;
+}
+
+.tdm {
+  display: inline-flex;
+}
+
+.navbar-action__other-language {
+  color: #F48024;
+  text-decoration: unset;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.navbar-action__tdm {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 640px) {
   .page__header--container {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
-  .logo-link {
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: 900;
+  .navbar-action__suggestion,
+  .navbar-action__tdm {
     display: inline-block;
-    padding: 15px 0;
-  }
-
-  .logo-link:hover {
-    outline: -webkit-focus-ring-color auto 5px;
   }
 
   .logo-link__recontact {
     color: #07c;
-    padding-left: 10px;
+    padding-left: 0;
   }
-
-  .logo-link__me {
-    color: #F48024;
-  }
-
-  .navbar-action {
-    cursor: pointer;
-    background: transparent;
-    font-size: 16px;
-    border: none;
-    padding: 16px 0;
-    line-height: 28px;
-    color: #333333;
-    display: inline-block;
-  }
-
-  .navbar-action:hover {
-    text-decoration: underline;
-    outline: -webkit-focus-ring-color auto 5px;
-  }
-
-  .navbar-action__suggestion, .navbar-action__tdm {
-    display: none;
-  }
-
-  .navigation__links {
-    list-style: none;
-    margin: 0;
-    display: inline-flex;
-  }
-
-  .navigation__link {
-    margin-left: 25px;
-  }
-
-  .page__container {
-    margin: 0 auto;
-  }
-
-  .tdm {
-    display: inline-flex;
-  }
-
-  .navbar-action__tdm {
-    padding: 10px;
-  }
-
-  @media only screen and (min-width: 640px) {
-    .page__header--container {
-      justify-content: space-between;
-    }
-
-    .navbar-action__suggestion, .navbar-action__tdm {
-      display: inline-block;
-    }
-
-    .logo-link__recontact {
-      color: #07c;
-      padding-left: 0;
-    }
-  }
+}
 </style>
