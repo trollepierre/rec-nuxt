@@ -78,8 +78,25 @@
       otherLanguage() {
         return this.$t('otherLanguage')
       }
-    },
+    },  
+    mounted() {
+      this.showConsole()
+    },    
     methods: {
+      showConsole() {
+        console.log('langue')
+        console.log('langue', navigator.language)
+        if(navigator.language.substring(0, 2) === 'en') {
+          console.log('langue', navigator.language)
+          console.log('english')
+          alert('go to https://you.recontact.me')
+        } else {
+          alert('Allez sur https://www.recontact.me')
+          console.log('french')
+          console.log('langue', navigator.language)
+        }
+      },
+      
       displaySubscribeModal() {
       // this.$modal.show('subscribe-modal')
       },
