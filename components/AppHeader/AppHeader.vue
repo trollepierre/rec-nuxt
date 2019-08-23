@@ -48,12 +48,12 @@
               </a>
             </li>
             <li class="navigation__link other-language">
-              <a
-                :title="otherLanguage"
+              <button
                 class="navbar-action navbar-action__other-language"
-                :href="otherUrl">
+                type="button"
+                @click.prevent="switchLanguage">
                 {{ $t("otherLanguage") }}
-              </a>
+              </button>
             </li>
           </ol>
         </nav>
@@ -64,7 +64,7 @@
 <script>
   export default {
     name: 'AppHeader',
-    data: () => ({ showNavBarButton: false }),
+    data: () => ({ showNavBarButton: false, otherUrl: '' }),
     computed: {
       tdm() {
         return this.$t('tdm')
@@ -78,16 +78,17 @@
       otherLanguage() {
         return this.$t('otherLanguage')
       },
-      otherUrl() {
-        return this.$t('otherUrl')
-      }
     },
     mounted() {
-      if(navigator.language.substring(0, 2) === 'fr' && window.location.href === 'https://www.recontact.me/') {
+      if (navigator.language.substring(0, 2) === 'fr' && window.location.host === 'www.recontact.me') {
         alert('La version française du blog est désormais disponible sur https://fr.recontact.me, cliquez sur le lien en haut à droite pour retrouver le blog en français.')
       }
     },
     methods: {
+      switchLanguage() {
+        window.location = this.$t('otherUrl') + window.location.pathname
+      },
+
       displaySubscribeModal() {
       // this.$modal.show('subscribe-modal')
       },
